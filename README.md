@@ -1,5 +1,5 @@
 # How to build the application
-- Visual Studio
+## Visual Studio
     This is a console application built in .NET 8 and can be loaded and run using Visual Studio 2022 v17.8+.
     Nuget will resolve and download the necessary packages to build the solution. In case of a nuget restore error, the following packages are required for RoadStatus.csproj:
     * Microsoft.Extensions.Configuration Version="8.0.0"
@@ -15,7 +15,7 @@
     * NUnit3TestAdapter Version="4.5.0"
     * Moq Version="4.20.70"
 
-- Visual Studio Code
+## Visual Studio Code
     The application can also be run using Visual Studio Code with the following extensions installed:
         > C# Dev Kit. Available to download at https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit
     Install .NET 8.0 SDK
@@ -37,7 +37,7 @@ Refer to this article: https://www.codemag.com/Article/2009101/Interactive-Unit-
 # Application Configuration in appSettings.json
 Before running the application, open appSettings.json file within the project RoadStatus.
 Change value for the key AppKey below with your subscription key for Tfl Road API 
-'''
+```json
 {
     "RoadApiUrl" : "https://api.tfl.gov.uk/Road",
     "AppId" : "AppId",
@@ -57,12 +57,11 @@ Change value for the key AppKey below with your subscription key for Tfl Road AP
         }
     }
 }
-'''
+```
 Please note that the default logging for console logging is set to 'Error'. If default value of 'Information' is used, then some Info logs are printed in the console terminal where the application is run, and the desired output appears to be cluttered.
 
 # How to run the application
-- Open command prompt
-  Change directory to RoadStatus/bin/Debug/net8.0 folder within the folder containing the solution
+- Open command prompt. Change directory to RoadStatus/bin/Debug/net8.0 folder within the folder containing the solution
     * Run command - 'RoadStatus.exe A2' - This should give the road status for road A2
     * Press Ctrl+c to exit
     * Run command 'echo $lastexitcode' - This should return 0 for success or 1 for failure
