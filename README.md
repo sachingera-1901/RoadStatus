@@ -62,13 +62,13 @@ Please note that the default logging for console logging is set to 'Error'. If d
 
 # How to run the application
 - Open command prompt. Change directory to RoadStatus/bin/Debug/net8.0 folder within the folder containing the solution
-    * Run command - 'RoadStatus.exe A2' - This should give the road status for road A2
+    * Run command - 'RoadStatus.exe <road_name>' - This should give the road status for road road_name
     * Press Ctrl+c to exit
     * Run command 'echo $lastexitcode' - This should return 0 for success or 1 for failure
 
 - In Visual Studio Code, after the application is built successfully, perform the following steps:
     * Right click project RoadStatus and select Open in Integrated Terminal
-    * At the command prompt Run command 'dotnet run A2' - This should give the road status for road A2
+    * At the command prompt Run command 'dotnet run <road_name>' - This should give the road status for road road_name
     * Press Ctrl+c to exit
     * Run command 'echo $lastexitcode' - This should return 0 for success or 1 for failure
 
